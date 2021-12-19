@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+   * {
+         font-family: 'Montserrat', sans-serif;
+      margin: 0;
+        padding: 0;
+      }
+
+   body {
+      font-family: 'Montserrat', sans-serif;
+      }
+
+   .header a {
+      text-decoration: none;
+      color: #000000;
+      }
+
+   .header li {
+      list-style: none;
+      }
+
+   .header {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      margin-left: 100px;
+      margin-right: 100px;
+      justify-content: space-between;
+      }
+
+   .list_menu {
+      margin-left: 92px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+       margin-right: 500px;
+      }
+
+   .list_menu li a {
+      margin-left: 32px;
+      margin-right: 32px;
+      font-size: 1rem;
+      font-weight: medium;
+      color: #333;
+      }
+
+   .list_menu li a:hover {
+      font-weight: 600;
+      }
+
+   .list_sns {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      }
+
+   .list_sns li a {
+      margin-left: 4px;
+      margin-right: 4px;
+      }
+
+   .list_lang {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      }
+
+   .list_lang li a {
+      margin-left: 4px;
+      margin-right: 4px;
+      font-size: 0.75rem;
+      }
+
+   .kor {
+      font-weight: 700;
+      }
+
+   .eng {
+      font-weight: 500;
+      }
+
+   .hero {
+      position: relative;
+      }
+
+   .jb-box {
+      width: 100%; 
+      overflow: hidden;
+      margin: 0px auto; 
+      position: relative;
+      }
+
+   .jb-text {
+      position: absolute;
+      color: #fff;
+      }
+
+   .hero iframe {
+      margin-right: auto;
+      margin-left: auto;
+      height: 989px;
+      width: 100%;
+      }
+
+   .background {
+      background-color: #101121;
+      padding-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -10px;
+      }
+
+   .contents {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 180px;
+      }
+
+   .title {
+      font-size: 30px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 52px;
+      }
+
+   .multimedia {
+      max-width:1280px;
+      padding-top: 180px;
+      margin-right: auto;
+         margin-left: auto;
+         display: block;
+      }
+
+   .multimedia iframe {
+      margin-right: auto;
+      margin-left: auto;
+      }
+
+   .multimedia p {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-top: 43px;
+      color: #fff;
+      margin-bottom: 88px;
+      }
+
+   .sub-if {
+      margin-left: auto;
+      margin-right: auto;
+      }
+
+   .sub-if iframe {
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+      } 
+
+   .button{
+   border: 2px solid #B5B5B5;
+   width: 240px;
+   
+   margin-left: auto;
+   margin-right: auto;
+
+   margin-top: 160px;
+   margin-bottom: 80px;
+   text-decoration: none;
+}
+.button a{
+     color: #B5B5B5;
+    text-decoration: none;
+}
+
+   .button p{
+   font-family:'Montserrat', sans-serif;
+   font-size: 14px;
+   font-weight: 500;
+   margin-top: 12px;
+   margin-bottom: 12px;
+    text-align: center;
+    color: #B5B5B5;
+    text-decoration: none;
+}
+
+.button-top{
+   display: inline-block;
+   margin-top: 40px;
+   margin-right: auto;
+   margin-left: 85%;
+    margin-bottom:80px;
+    vertical-align: center;
+}
+.button-top img{
+   opacity: 0.8;
+   width: 40px;
+   height: 40px;
+   display: inline-block;
+   float: right;
+}
+
+#text{ 
+ opacity: 0; 
+ font-size: 12px;
+ font-weight: 700px;
+ color: #B5B5B5;
+ display: inline-block;
+ margin-right: 10px;
+ margin-top: 12px;
+} 
+
+.button-top:hover #text{ 
+opacity: 1; 
+transition: 0.6s ease-in;
+}
+.button-top img:hover { 
+opacity: 1; 
+}
+
+   .footer{
+         background-color: #051A45;
+         height: 252px;
+       text-align: center;
+       margin-top: auto;
+      }
+
+   .footer{
+         height: 120px;
+         width: 100%;
+         background-color: #051A45;
+         padding-top: 50px;
+         padding-bottom: 50px;
+         }
+
+   .foot{
+         display: inline-block;
+         text-align: center;
+         margin-left: auto;
+         margin-right: auto;
+         width: 1291px;
+
+         }
+
+   .footer-logo{
+         display: inline-block;
+         margin-left: auto;
+         margin-right: auto;
+         }
+
+   .footer-logo-img{
+         height: 60px;
+         }
+
+   .text-loc{
+         display: inline-block;
+         color: #fff;
+         font-size: 12px;
+         width: 436px;
+         font-weight: 200;
+         vertical-align: top;
+         text-align: left;
+         margin-left: 140px;
+         }
+
+   .te{
+         margin-top: 20px;
+         }
+
+   .text-oth{
+         display: inline-block;
+         color: #fff;
+         font-size: 12px;
+         width: 382px;
+         font-weight: 200;
+         vertical-align: top;
+         text-align: right;
+
+         }
+
+   .text-oth img{
+         margin-top: 15px;
+         margin-left: 10px;
+         }
+
+   .footer-sns img:hover{
+         opacity: 0.8;
+         }
+
+   .footer-sns img{
+         height: 20px;
+         margin-top: 70px;
+         }
+
+   .contents {
+      margin-left: auto;
+      margin-right: auto;
+      }
+
+   .slidebox {
+      max-width:1080px;
+      margin:0 auto;
+      position:relative;
+      padding:0;
+      box-sizing:border-box;
+      }
+
+   .slideitem {
+      text-align: center;
+      }
+
+   .slidebox .slidelist {
+      position:relative;
+      white-space:nowrap;
+      font-size:0;
+      overflow:hidden;
+      }
+
+   .slidebox .slidelist .slideitem {
+      position:relative;
+      display:inline-block;
+      vertical-align:middle;
+      background-color:#101121;
+      width:100%;
+      transition:all 1s;
+      }
+
+   .slidebox .slidelist .slideitem > .sub-if {
+      display:block;
+      width:auto;
+      position:relative;
+      }
+
+   .slidebox .slidelist .slideitem > .sub-if iframe {
+      max-width:100%;
+      }
+
+   .slidebox .slide-control [class*="control"] label {
+      position:absolute;
+      z-index:10;
+      top:50%;
+      transform:translateY(-50%);
+      padding:30px;
+      cursor:pointer;
+      }
+
+   .slidebox .slide-control [class*="control"] label.prev {
+      left:-100px;
+      background:#101121 url('img/prev-arrow.png') center center / 50% no-repeat;
+      }
+
+   .slidebox .slide-control [class*="control"] label.next {
+      right:-100px;
+      background:#101121 url('img/next-arrow.png') center center / 50% no-repeat;
+      }
+
+   [name="slide"] {display:none;}
+   #slide01:checked ~ .slidelist .slideitem {left:0;}
+   #slide02:checked ~ .slidelist .slideitem {left:-100%;}
+   #slide03:checked ~ .slidelist .slideitem {left:-200%;}
+
+   .slide-control [class*="control"] {display:none;}
+   #slide01:checked ~ .slide-control .control01 {display:block;}
+   #slide02:checked ~ .slide-control .control02 {display:block;}
+   #slide03:checked ~ .slide-control .control03 {display:block;}
+
+   .sub-if {
+      margin-left: auto;
+      margin-right: auto;
+      }
+
+   .sub-if iframe {
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+      padding-right: 22.5px;
+      padding-left: 22.5px;
+      } 
+
+   .container {
+         float: left;
+         margin-left: 180px;
+         margin-right: 180px;
+         }
+   .container1 {
+         float: left;
+         margin-left: 180px;
+         margin-right: 180px;
+         margin-top: 310px;
+         }
+
+   .album{
+         display: inline-block;
+         position: relative;
+         }
+
+   .cover{
+         float: left;
+         position: relative;
+         }
+
+   .cover img{
+         width: 252px;
+         position: absolute;
+         }
+
+   .lp{
+         position: absolute;
+         width: 214px;
+         transition: all 0.25s ease-in;
+         }
+      
+   .lp img{
+         width: 214px;
+         position: absolute;
+         margin-top: 20px;
+         margin-left: 80px;
+         }
+      
+   .album:hover .lp{
+         transform: translate(50px);
+         }
+
+   .text{
+         display: inline-block;
+         width: 252px;
+         position: absolute;
+         margin-top: 275px;
+         color: #ffffff;
+         }
+
+   .text h2{
+         font-size: 16px;
+         display: inline-block;
+         margin-top: 0;
+         }
+   .text h3{
+         font-size: 10px;
+         display: inline-block;
+         margin-left: 140px;
+         }
+   .text p{
+         font-size: 18px;
+         margin-top: 0;
+         margin-bottom: 0;
+         }
+
+   .release {
+         max-width: 1280px;
+         margin-left: auto;
+         margin-right: auto;
+
+         }   
+
+   .containerbox {
+         display: block;
+         padding-bottom: 200px;
+        /* background-color: yellow;*/
+         height: 530px;
+         }
+
+   </style>
+</head>
+<body>
+<div class="all">
+   <section class="header">
+      <a href="main.html"><img src="img/logo.png" alt="logo" style="height:40px;"></a>
+
+      <ul class="list_menu">
+         <li><a href="#">COMPANY</a></li>
+         <li><a href="artist.html">ARTIST</a></li>
+         <li><a href="multimedia.html">MULTIMEDIA</a></li>
+      </ul>
+
+      <ul class="list_sns">
+         <li class="youtube"><a href="https://www.youtube.com/channel/UCaO6TYtlC8U5ttz62hTrZgg"><img src="img/youtube.png" alt="youtube" onmouseover="this.src='img/youtube_hover.png'" onmouseout="this.src='img/youtube.png'" style="height:18px;"></a></li>
+         <li class="facebook"><a href="https://www.facebook.com/jypnation"><img src="img/facebook.png" alt="facebook" onmouseover="this.src='img/facebook_hover.png'" onmouseout="this.src='img/facebook.png'" style="height:18px;"></a></li>
+         <li class="instagram"><a href="https://www.instagram.com/jypentertainment/"><img src="img/instagram.png" alt="instagram" onmouseover="this.src='img/instagram_hover.png'" onmouseout="this.src='img/instagram.png'" style="height:18px;"></a></li>
+         <li class="twitter"><a href="https://twitter.com/jypnation"><img src="img/twitter.png" alt="twitter" onmouseover="this.src='img/twitter_hover.png'" onmouseout="this.src='img/twitter.png'" style="height:18px;"></a></li>         
+      </ul>
+
+      <ul class="list_lang">
+         <li class="kor"><a href="#">KOR ㅣ</a></li>
+         <li class="eng"><a href="#">ENG</a></li>
+      </ul>
+   </section>
+
+    
+   <section class="hero">
+      <div class="jb-box">
+            <iframe src="https://www.youtube.com/embed/_XYnwOZlBQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="jb-text">
+               <p>JYP<br>MULTIMEDIA</p>
+               <p>STRAYKIDS<br>"Christmas Evel" M/V</p>
+            </div>
+        </div>
+   </section>
+</div>
+<div class="background">
+      <div class="contents">
+         <section class="multimedia">
+         <h1 class="title">MULTIMEDIA</h1>
+
+         <iframe width="1280" height="750" src="https://www.youtube.com/embed/57n4dZAPxNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <p>Stray Kids(스트레이 키즈)<br>"Christmas EveL" M/V</p>
+
+         <div class="slidebox">
+            <input type="radio" name="slide" id="slide01" checked>
+            <input type="radio" name="slide" id="slide02">
+            <input type="radio" name="slide" id="slide03">
+            <ul class="slidelist">
+               <li class="slideitem">
+                  <div class="sub-if">
+                     <iframe width="328" height="186" src="https://www.youtube.com/embed/v9H-bT_76x0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     <iframe width="328" height="186" src="https://www.youtube.com/embed/spG0LAB3L1o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     <iframe width="328" height="186" src="https://www.youtube.com/embed/f5_wn8mexmM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+               </li>
+               <li class="slideitem">
+                  <div class="sub-if">
+                     <iframe width="328" height="186" src="https://www.youtube.com/embed/IePbjLAUvf0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     <iframe width="328" height="186" src="https://www.youtube.com/embed/EaswWiwMVs8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     <iframe width="328" height="186" src="https://www.youtube.com/embed/pNfTK39k55U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+               </li>
+               <li class="slideitem">
+                  <div class="sub-if">
+                     <iframe width="328" height="186" src="https://www.youtube.com/embed/_ysomCGaZLw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     <iframe width="328" height="186" src="https://www.youtube.com/embed/X-uJtV8ScYk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     <iframe width="328" height="186" src="https://www.youtube.com/embed/-6aVQrzja9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+               </li>
+               
+            </ul>
+            <div class="slide-control">
+               <div class="control01">
+                  <label for="slide03" class="prev"></label>
+                  <label for="slide02" class="next"></label>
+               </div>
+               <div class="control02">
+                  <label for="slide01" class="prev"></label>
+                  <label for="slide03" class="next"></label>
+               </div>
+               <div class="control03">
+                  <label for="slide02" class="prev"></label>
+                  <label for="slide01" class="next"></label>
+               </div>
+            </div>
+         </div>
+      </section>
+      </div>
+
+   <section class="release">
+      <div class="containerbox">
+         <h1 class="title">RELEASES</h1>
+         <a href="https://vibe.naver.com/album/6653932"><div class="container">
+              <div class="album">
+                 <div class="lp">
+                  <img src="img/lp.png">
+                  </div>
+                  <div class="cover">
+                  <img src="img/twice-cover3.png">
+                  </div>
+               </div>
+               <div class="text">
+                  <h2>TWICE</h2>
+                  <h3>2021.11.12</h3>
+                  <p>Formula of Love: O+T=<3</p>
+               </div>
+          </div>
+           </a>
+         
+
+         <a href="https://vibe.naver.com/album/6368367"><div class="container">
+              <div class="album">
+                 <div class="lp">
+                  <img src="img/lp.png">
+                  </div>
+                  <div class="cover">
+                  <img src="img/straykids-cover2.jpg">
+                  </div>
+               </div>
+               <div class="text">
+                  <h2>STRAY </h2>
+                  <h3>2021.06.28</h3>
+                  <p>NOEASY</p>
+               </div>
+          </div>
+           </a>
+
+
+         <a href="https://vibe.naver.com/album/6100669"><div class="container">
+              <div class="album">
+                 <div class="lp">
+                  <img src="img/lp.png">
+                  </div>
+                  <div class="cover">
+                  <img src="img/2pm-album2.jfif">
+                  </div>
+               </div>
+               <div class="text">
+                  <h2>2PM </h2>
+                  <h3>2021.06.28</h3>
+                  <p>MUST</p>
+               </div>
+          </div>
+           </a>
+         
+
+
+
+<!-- /////////////////////////////////////////////////////
+ -->
+        
+         <a href="https://vibe.naver.com/album/6442719"><div class="container1">
+              <div class="album">
+                 <div class="lp">
+                  <img src="img/lp.png">
+                  </div>
+                  <div class="cover">
+                  <img src="img/itzy-cover1.jfif">
+                  </div>
+               </div>
+               <div class="text">
+                  <h2>ITZY</h2>
+                  <h3>2021.09.24</h3>
+                  <p>CRAZY IN LOVE</p>
+               </div>
+          </div>
+           </a>
+         
+
+         <a href="https://vibe.naver.com/album/6108237"><div class="container1">
+              <div class="album">
+                 <div class="lp">
+                  <img src="img/lp.png">
+                  </div>
+                  <div class="cover">
+                  <img src="img/itzy-album2.jfif">
+                  </div>
+               </div>
+               <div class="text">
+                  <h2>ITZY </h2>
+                  <h3>2021.07.01</h3>
+                  <p>얼음깨</p>
+               </div>
+          </div>
+           </a>
+
+
+         <a href="https://vibe.naver.com/album/5842606"><div class="container1">
+              <div class="album">
+                 <div class="lp">
+                  <img src="img/lp.png">
+                  </div>
+                  <div class="cover">
+                  <img src="img/itzy-album3.jpg">
+                  </div>
+               </div>
+               <div class="text">
+                  <h2>ITZY </h2>
+                  <h3>2021.05.24</h3>
+                  <p>마.피.아. In the morning</p>
+               </div>
+          </div>
+           </a></div>
+   </section>
+
+   <section class="back-button">
+      <div class="button">
+          <p><a href="main.html">BACK TO LIST</a></p>
+       </div>
+      
+        <div class="button-top"> 
+         <a href="multimedia.html">
+             <p id = 'text'>To the Top</p> 
+         <img src="img/icon-backtop.png" alt="">
+         </a>
+   </section>
+</div>   
+
+    <section class="footer">
+      <div class="foot">
+         <div class="footer-logo">
+            <img class="footer-logo-img" src="img/jyplogo_footer.png">
+         </div>
+         <div class="text-loc">
+            <p>서울특별시 강동구 강동대로 205</p><br>
+             <p class="te">광고, 매니지먼트 관련 문의(ad@jype.com)<br>
+해외사업, 마케팅, 사업제휴관련 문의(jypbusiness@jype.com)<br>
+국내/해외 공연 마케팅 사업 제휴관련 문의 (concert@jype.com</p>
+         </div>
+         <div class="text-oth">
+            <p>Copyrightⓒ2021 JYP Corporation. All rights reserved.</p>
+            <div class="footer-sns">
+               <a href="https://www.youtube.com/channel/UCaO6TYtlC8U5ttz62hTrZgg"><img src="img/youtube_footer.png"></a>
+               <a href="https://www.facebook.com/jypnation"><img src="img/facebook_footer.png"></a>
+               <a href="https://www.instagram.com/jypentertainment/"><img src="img/instagram_footer.png"></a>
+               <a href="https://twitter.com/jypnation"><img src="img/twitter_footer.png"></a>
+            </div>
+         </div>   
+      </div>
+   </section>
+</body>
+</html>

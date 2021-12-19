@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+   <meta charset="utf-8">
+   <title>main</title>
+   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700&display=swap" rel="stylesheet">
+   <style>
+   *{
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      /*background-color: #101121;*/
+   }
+
+ .header a {
+      text-decoration: none;
+      color: #000000;
+      }
+
+   .header li {
+      list-style: none;
+      }
+
+   .header {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      margin-left: 100px;
+      margin-right: 100px;
+      justify-content: space-between;
+      }
+
+   .list_menu {
+      margin-left: 92px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+       margin-right: 500px;
+      }
+
+   .list_menu li a {
+      margin-left: 32px;
+      margin-right: 32px;
+      font-size: 1rem;
+      font-weight: medium;
+      color: #333;
+      }
+
+   .list_menu li a:hover {
+      font-weight: 600;
+      }
+
+   .list_sns {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      }
+
+   .list_sns li a {
+      margin-left: 4px;
+      margin-right: 4px;
+      }
+
+   .list_lang {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      }
+
+   .list_lang li a {
+      margin-left: 4px;
+      margin-right: 4px;
+      font-size: 0.75rem;
+      }
+
+   .kor {
+      font-weight: 700;
+      }
+
+   .eng {
+      font-weight: 500;
+      }
+
+
+
+
+   /*.hero-img{
+      background-image: url(img/2pm-pf-hover.jpg);
+      height: 990px;
+      width: 1920px;
+      background-size: cover;
+      background-position: center;
+      margin-left: auto;
+      margin-right: auto;
+   }*/
+   #acc1{
+      background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url(img/hero-1.jpg);
+      }
+   #acc2{
+      background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ),url(img/hero-6.png);
+   }
+   #acc3{
+      background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(img/hero-3.jpg);
+   }
+
+   article.accordion
+   {
+       display: block;
+       width: 100%;
+       height: 100vh;
+       margin: 0 auto;
+       overflow: auto;
+       position: relative;
+       background-color: #101121;
+   }
+   article.accordion section
+   {
+       position: relative;
+       display: block;
+       float: left;
+       width: 5em;
+       height: 100%;
+       color: #333;
+       background-color: #333;
+       overflow: hidden;
+       border-radius: 3px;
+   }
+   article.accordion section h2
+   {
+       position: absolute;
+       font-size: 1em;
+       font-weight: bold;
+       width: 12em;
+       height: 2em;
+       top: 12em;
+       left: 0;
+       text-indent: 1em;
+       padding: 0;
+       margin: 0;
+       color: #ddd;
+       -webkit-transform-origin: 0 0;
+       -moz-transform-origin: 0 0;
+       -ms-transform-origin: 0 0;
+       -o-transform-origin: 0 0;
+       transform-origin: 0 0;
+       -webkit-transform: rotate(-90deg);
+       -moz-transform: rotate(-90deg);
+       -ms-transform: rotate(-90deg);
+       -o-transform: rotate(-90deg);
+       transform: rotate(-90deg);
+   }
+   article.accordion section h2 a
+   {
+       display: block;
+       width: 100%;
+       line-height: 2em;
+       text-decoration: none;
+       color: #fff;
+       outline: 0 none;
+   }
+   article.accordion section:target
+   {
+       width: 90%;
+       color: #fff;
+   }
+   article.accordion section:target h2
+   {
+       position: static;
+       font-size: 3.75rem;
+       text-indent: 0;
+       color: #fff;
+       -webkit-transform: rotate(0deg);
+       -moz-transform: rotate(0deg);
+       -ms-transform: rotate(0deg);
+       -o-transform: rotate(0deg);
+       transform: rotate(0deg);
+       margin-left: 20px;
+   }
+   article.accordion section,
+   article.accordion section h2
+   {
+       -webkit-transition: all 1s ease;
+       -moz-transition: all 1s ease;
+       -ms-transition: all 1s ease;
+       -o-transition: all 1s ease;
+       transition: all 1s ease;
+   }
+
+
+   .visual{
+      background-color: #101121;
+      padding-top: 180px;
+      padding-bottom: 300px;
+   }
+
+   .main{
+      width: 1280px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   h1{
+      margin-top: 180px;
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: #fff;
+   }
+   h2{
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: #fff;
+   }
+
+   .artist{
+      /*padding-bottom: 180px;
+      background-color: purple;*/
+   }
+
+   .group{
+      float: left;
+      width: 297px;
+      text-decoration: none;
+      margin-bottom: 50px;
+      /*background-color: blue;*/
+      margin-right: 30px;
+   }
+
+   .group4{
+      float: left;
+      width: 297px;
+      text-decoration: none;
+      margin-bottom: 50px;
+      /*background-color: blue;*/
+   }
+
+   .group a{
+      text-decoration: none;
+      color: #fff;
+   }
+
+   .group4 a{
+      text-decoration: none;
+      color: #fff;
+   }
+
+   .group .name{
+      margin-top: 24px;
+      font-size: 20px;
+     font-weight: 400;
+      color: black;
+      text-align: center;
+      color: #fff;
+   }
+
+   .group4 .name{
+      margin-top: 24px;
+      font-size: 20px;
+     font-weight: 400;
+      color: black;
+      text-align: center;
+      color: #fff;
+   }
+
+   .box-img{
+      margin-top: 52px;
+   }
+
+   .multimedia{
+      margin-top: 1378px;
+   }
+
+   .multimedia iframe{
+      margin-top: 52px;
+   }
+
+   .multimedia p{
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-top: 43px;
+      color: #fff;
+      margin-bottom: 59px;
+   }
+
+   .sub-if{
+      margin-left: 94px;
+      margin-right: auto;
+   }
+
+   .sub-if iframe{
+      margin-right: 20px;
+      margin-left: 20px;
+   }
+
+   .all{
+      /*background-color: green;*/
+       margin-left: auto;
+      margin-right: auto;
+      width: 1280px;
+   }
+   .follow-jyp{
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   .f{
+      display: flex;
+      margin-left: 109px;
+      margin-right: auto;
+      /*background-color: purple;*/
+   }
+
+   .profile {
+     position: relative;
+     float: left;
+      margin-top: 88px;
+      margin-left: 15px;
+      margin-right: 15px;
+      /*background-color: red;*/
+     }
+
+     .profile p{
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 12px;
+        color: #fff;
+        text-decoration: none;
+     }
+
+     .profile a{
+        text-decoration: none;
+     }
+     
+     .profile img {
+       max-width: 100%;
+       border-radius: 50%;
+     }
+
+     .profile img:hover{
+       transform: translateX(-2%);
+     }
+
+     .footer{
+       background-color: #051A45;
+       height: 252px;
+       text-align: center;
+     }
+   .footer{
+         height: 120px;
+         width: 100%;
+         background-color: #051A45;
+         padding-top: 50px;
+         padding-bottom: 50px;
+      }
+      .foot{
+         display: inline-block;
+         text-align: center;
+         margin-left: auto;
+         margin-right: auto;
+         width: 1291px;
+
+      }
+      .footer-logo{
+         display: inline-block;
+         margin-left: auto;
+         margin-right: auto;
+      }
+      .footer-logo-img{
+         height: 60px;
+      }
+
+      .text-loc{
+         display: inline-block;
+         color: #fff;
+         font-size: 0.75rem;
+         width: 436px;
+         font-weight: 200;
+         vertical-align: top;
+         text-align: left;
+         margin-left: 140px;
+      }
+      .te{
+         margin-top: 20px;
+      }
+      .text-oth{
+         display: inline-block;
+         color: #fff;
+         font-size: 12px;
+         width: 382px;
+         font-weight: 200;
+         vertical-align: top;
+         text-align: right;
+         text-decoration: none;
+
+      }
+      .text-oth p{
+         color: #fff;
+      }
+      .text-oth img{
+         margin-top: 15px;
+         margin-left: 10px;
+      }
+      .footer-sns img:hover{
+         opacity: 0.8;
+      }
+      .footer-sns img{
+         height: 20px;
+         margin-top: 70px;
+      }
+      .contents {
+      margin-left: auto;
+      margin-right: auto;
+      }
+
+   .slidebox {
+      max-width:1080px;
+      margin:0 auto;
+      position:relative;
+      padding:0;
+      box-sizing:border-box;
+      }
+
+   .slideitem {
+      text-align: center;
+      }
+
+   .slidebox .slidelist {
+      position:relative;
+      white-space:nowrap;
+      font-size:0;
+      overflow:hidden;
+      }
+
+   .slidebox .slidelist .slideitem {
+      position:relative;
+      display:inline-block;
+      vertical-align:middle;
+      background-color:#101121;
+      width:100%;
+      transition:all 1s;
+      }
+
+   .slidebox .slidelist .slideitem > .sub-if {
+      display:block;
+      width:auto;
+      position:relative;
+      }
+
+   .slidebox .slidelist .slideitem > .sub-if iframe {
+      max-width:100%;
+      }
+
+   .slidebox .slide-control [class*="control"] label {
+      position:absolute;
+      z-index:10;
+      top:50%;
+      transform:translateY(-50%);
+      padding:30px;
+      cursor:pointer;
+      }
+
+   .slidebox .slide-control [class*="control"] label.prev {
+      left:-100px;
+      background:#101121 url('img/prev-arrow.png') center center / 50% no-repeat;
+      }
+
+   .slidebox .slide-control [class*="control"] label.next {
+      right:-100px;
+      background:#101121 url('img/next-arrow.png') center center / 50% no-repeat;
+      }
+
+   [name="slide"] {display:none;}
+   #slide01:checked ~ .slidelist .slideitem {left:0;}
+   #slide02:checked ~ .slidelist .slideitem {left:-100%;}
+   #slide03:checked ~ .slidelist .slideitem {left:-200%;}
+
+   .slide-control [class*="control"] {display:none;}
+   #slide01:checked ~ .slide-control .control01 {display:block;}
+   #slide02:checked ~ .slide-control .control02 {display:block;}
+   #slide03:checked ~ .slide-control .control03 {display:block;}
+
+   .sub-if {
+      margin-left: auto;
+      margin-right: auto;
+      }
+
+   .sub-if iframe {
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+      padding-right: 22.5px;
+      padding-left: 22.5px;
+      } 
+      .button-group{
+         background-color: #101121;
+      }
+      .button{
+   border: 2px solid #fff;
+   width: 240px;
+   
+   margin-left: auto;
+   margin-right: auto;
+
+   margin-bottom: 80px;
+   text-decoration: none;
+}
+.button a{
+     color: #fff;
+    text-decoration: none;
+}
+
+   .button p{
+   font-family:'Montserrat', sans-serif;
+   font-size: 14px;
+   font-weight: 500;
+   margin-top: 12px;
+   margin-bottom: 12px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.button-top{
+   display: inline-block;
+   margin-top: 40px;
+   margin-right: auto;
+   margin-left: 85%;
+    margin-bottom:80px;
+    vertical-align: center;
+}
+.button-top img{
+   opacity: 0.8;
+   width: 40px;
+   height: 40px;
+   display: inline-block;
+   float: right;
+}
+
+#text{ 
+ opacity: 0; 
+ font-size: 12px;
+ font-weight: 700px;
+ color: #fff;
+ display: inline-block;
+ margin-right: 10px;
+ margin-top: 12px;
+} 
+
+.button-top:hover #text{ 
+opacity: 1; 
+transition: 0.6s ease-in;
+}
+.button-top img:hover { 
+opacity: 1; 
+}
+
+      
+   </style>
+</head>
+<body>
+   <section class="header">
+      <a href="main.html"><img src="img/logo.png" alt="logo" style="height:40px;"></a>
+
+      <ul class="list_menu">
+         <li><a href="#">COMPANY</a></li>
+         <li><a href="artist.html">ARTIST</a></li>
+         <li><a href="multimedia.html">MULTIMEDIA</a></li>
+      </ul>
+
+      <ul class="list_sns">
+         <li class="youtube"><a href="https://www.youtube.com/channel/UCaO6TYtlC8U5ttz62hTrZgg"><img src="img/youtube.png" alt="youtube" onmouseover="this.src='img/youtube_hover.png'" onmouseout="this.src='img/youtube.png'" style="height:18px;"></a></li>
+         <li class="facebook"><a href="https://www.facebook.com/jypnation"><img src="img/facebook.png" alt="facebook" onmouseover="this.src='img/facebook_hover.png'" onmouseout="this.src='img/facebook.png'" style="height:18px;"></a></li>
+         <li class="instagram"><a href="https://www.instagram.com/jypentertainment/"><img src="img/instagram.png" alt="instagram" onmouseover="this.src='img/instagram_hover.png'" onmouseout="this.src='img/instagram.png'" style="height:18px;"></a></li>
+         <li class="twitter"><a href="https://twitter.com/jypnation"><img src="img/twitter.png" alt="twitter" onmouseover="this.src='img/twitter_hover.png'" onmouseout="this.src='img/twitter.png'" style="height:18px;"></a></li>         
+      </ul>
+
+      <ul class="list_lang">
+         <li class="kor"><a href="#">KOR ㅣ</a></li>
+         <li class="eng"><a href="#">ENG</a></li>
+      </ul>
+   </section>
+
+
+   <section class="hero-img">
+      <div class="hero-image">
+      </div>
+   </section>
+   <article class="accordion">
+      <section id="acc1">
+         <a href="#acc"></a>
+         <h2><a href="#acc1">2PM</a></h2>
+      </section>
+      <section id="acc2">
+         <h2><a href="#acc2">ITZY</a></h2>
+      </section>
+      <section id="acc3">
+         <h2><a href="#acc3">STRAYKIDS</a></h2>
+      </section>
+
+   </article>
+
+
+   <div class="visual">
+   <div class="main">
+   <section class="artist">
+      <h2 class="title">ARTIST</h2>
+
+      <!-- <--첫번째줄-->
+      <div class="box-img">
+          <a class="group" href="artist-media.html">
+             <img src="img/jyp-pf-hover.jpg" alt="J.Y.Park" onmouseover="this.src='img/jyp-pf.jpg'" onmouseout="this.src='img/jyp-pf-hover.jpg'" style="width:297px;">
+             <p class="name">J.Y.Park</p>
+          </a>
+       </div>
+       <div class="box-img">
+          <a class="group" href="artist-media.html">
+             <img src="img/2pm-pf-hover.jpg" alt="2PM" onmouseover="this.src='img/2pm-pf.jpg'" onmouseout="this.src='img/2pm-pf-hover.jpg'" style="width:297px;">
+             <p class="name">2PM</p>
+          </a>
+       </div>
+       <div class="box-img">
+          <a class="group" href="artist-media.html">
+             <img src="img/bernard-pf.jpg" alt="Bernard Park" onmouseover="this.src='img/bernard-pf-hover.jpg'" onmouseout="this.src='img/bernard-pf.jpg'" style="width:297px;">
+             <p class="name">Bernard Park</p>
+          </a>
+       </div>
+       <div class="box-img">
+          <a class="group4" href="artist-media.html">
+             <img src="img/day6-pf.jpg" alt="DAY6" onmouseover="this.src='img/day6-pf-hover.jpg'" onmouseout="this.src='img/day6-pf.jpg'" style="width:297px;">
+             <p class="name">DAY6</p>
+          </a>
+       </div>
+
+       <!-- <--두번째줄--> 
+       <div class="box-img">
+          <a class="group" href="artist-media.html">
+             <img src="img/twice-pf.jpg" alt="TWICE" onmouseover="this.src='img/twice-pf-hover.jpg'" onmouseout="this.src='img/twice-pf.jpg'" style="width:297px;">
+             <p class="name">TWICE</p>
+          </a>
+       </div>
+       <div class="box-img">
+          <a class="group" href="artist-media.html">
+             <img src="img/straykids-pf.jpg" alt="Stray Kids" onmouseover="this.src='img/straykids-pf-hover.jpg'" onmouseout="this.src='img/straykids-pf.jpg'" style="width:297px;">
+             <p class="name">Stray Kids</p>
+          </a>
+       </div>
+       <div class="box-img">
+          <a class="group" href="artist-media.html">
+             <img src="img/itzy-pf.jpg" alt="ITZY" onmouseover="this.src='img/itzy-pf-hover.jpg'" onmouseout="this.src='img/itzy-pf.jpg'" style="width:297px;">
+             <p class="name">ITZY</p>
+          </a>
+       </div>
+       <div class="box-img">
+          <a class="group4" href="artist-media.html">
+             <img src="img/boystory-pf.jpg" alt="BOY STORY" onmouseover="this.src='img/boystory-pf-hover.jpg'" onmouseout="this.src='img/boystory-pf.jpg'" style="width:297px;">
+             <p class="name">BOY STORY</p>
+          </a>
+       </div>
+
+       <!-- <--세번째줄--> 
+       <div class="box-img">
+          <a class="group" href="artist-media.html">
+             <img src="img/nizu-pf.jpg" alt="NiziU" onmouseover="this.src='img/nizu-pf-hover.jpg'" onmouseout="this.src='img/nizu-pf.jpg'" style="width:297px;">
+             <p class="name">NiziU</p>
+          </a>
+       </div>
+       <div class="box-img">
+          <a class="group" href="artist-media.html">
+             <img src="img/eunsu-pf.jpg" alt="Sin Eunsu" onmouseover="this.src='img/eunsu-pf-hover.jpg'" onmouseout="this.src='img/eunsu-pf.jpg'" style="width:297px;">
+             <p class="name">Sin Eunsu</p>
+          </a>
+       </div>
+       <div class="box-img">
+          <a class="group" href="artist-media.html">
+             <img src="img/yeeun-pf.png" alt="Sin Ye-eun" onmouseover="this.src='img/yeeun-pf-hover.png'" onmouseout="this.src='img/yeeun-pf.png'" style="width:297px;">
+             <p class="name">Sin Ye-eun</p>
+          </a>
+       </div>
+       <div class="box-img">
+          <a class="group4" href="artist-media.html">
+             <img src="img/donghwi-pf.jpg" alt="Kim Dong-hwi" onmouseover="this.src='img/donghwi-pf-hover.jpg'" onmouseout="this.src='img/donghwi-pf.jpg'" style="width:297px;">
+             <p class="name">Kim Dong-hwi</p>
+          </a>
+       </div>
+   </section>
+
+
+
+   <section class="multimedia">
+      <h1 class="title">MULTIMEDIA</h1>
+
+      <iframe width="1280" height="750" src="https://www.youtube.com/embed/57n4dZAPxNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p>Stray Kids(스트레이 키즈)<br>"Christmas EveL" M/V</p>
+
+      <div class="slidebox">
+            <input type="radio" name="slide" id="slide01" checked>
+            <input type="radio" name="slide" id="slide02">
+            <input type="radio" name="slide" id="slide03">
+            <ul class="slidelist">
+               <li class="slideitem">
+                  <div class="sub-if">
+                     <iframe width="328" height="186" src="https://www.youtube.com/embed/v9H-bT_76x0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     <iframe width="328" height="186" src="https://www.youtube.com/embed/spG0LAB3L1o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     <iframe width="328" height="186" src="https://www.youtube.com/embed/f5_wn8mexmM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+               </li>
+               <li class="slideitem">
+                  <div class="sub-if">
+                     <iframe width="328" height="186" src="https://www.youtube.com/embed/IePbjLAUvf0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     <iframe width="328" height="186" src="https://www.youtube.com/embed/EaswWiwMVs8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     <iframe width="328" height="186" src="https://www.youtube.com/embed/pNfTK39k55U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+               </li>
+               <li class="slideitem">
+                  <div class="sub-if">
+                     <iframe width="328" height="186" src="https://www.youtube.com/embed/_ysomCGaZLw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     <iframe width="328" height="186" src="https://www.youtube.com/embed/X-uJtV8ScYk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     <iframe width="328" height="186" src="https://www.youtube.com/embed/-6aVQrzja9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+               </li>
+               
+            </ul>
+            <div class="slide-control">
+               <div class="control01">
+                  <label for="slide03" class="prev"></label>
+                  <label for="slide02" class="next"></label>
+               </div>
+               <div class="control02">
+                  <label for="slide01" class="prev"></label>
+                  <label for="slide03" class="next"></label>
+               </div>
+               <div class="control03">
+                  <label for="slide02" class="prev"></label>
+                  <label for="slide01" class="next"></label>
+               </div>
+            </div>
+         </div>
+      </section>
+      </div>
+
+
+      <!-- <--여기에 동영상 그 반응형버튼 넣어야함!!!!!!!!!!!!!!!!!!!-->
+   </section>
+
+
+
+   <section class="follow-jyp">
+      <div class="all">
+         <h1 class="title">FOLLOW JYP</h1>
+
+      <div class="follow">
+      <div class="f">
+         <div class="profile">
+               <a href="https://www.instagram.com/jypentertainment/"><img src="img/@jypoffice.jpg" style="width:150px;">
+               <p class="name">@jypentertainment</p>
+           </div>
+           <div class="profile">
+               <a href="https://www.instagram.com/jyp_audition_official/"><img src="img/@jypaudition.jpg" style="width:150px;">
+               <p class="name">@jyp_audition_official</p>
+           </div>
+       </div>
+
+       <div class="f">
+         <div class="profile">
+               <a href="https://www.instagram.com/asiansoul_jyp/"><img src="img/@jyp.jpg" style="width:150px;">
+               <p class="name">@asiansoul_jyp</p>
+           </div>
+           <div class="profile">
+               <a href="https://www.instagram.com/jun2dakay/"><img src="img/@junk.jpg" style="width:150px;">
+               <p class="name">@jun2dakay</p>
+           </div>
+           <div class="profile">
+               <a href="https://www.instagram.com/khunsta0624/"><img src="img/@kun.jpg" style="width:150px;">
+               <p class="name">@khunsta0624</p>
+           </div>
+           <div class="profile">
+               <a href="https://www.instagram.com/taecyeonokay/"><img src="img/@taek.jpg" style="width:150px;">
+               <p class="name">@taecyeonkay</p>
+           </div>
+           <div class="profile">
+               <a href="https://www.instagram.com/0430_live_boy/"><img src="img/@uyoung.jpg" style="width:150px;">
+               <p class="name">@0430_live_boy</p>
+           </div>
+           <div class="profile">
+               <a href="https://www.instagram.com/le2jh/"><img src="img/@junho.jpg" style="width:150px;">
+               <p class="name">@le2jh</p>
+           </div>
+       </div>
+
+       <div class="f">
+           <div class="profile">
+               <a href="https://www.instagram.com/bernardpark/"><img src="img/@bernard.jpg" style="width:150px;">
+               <p class="name">@bernardpark</p>
+           </div>
+           <div class="profile">
+               <a href="https://www.instagram.com/day6kilogram/"><img src="img/@day6.jpg" style="width:150px;">
+               <p class="name">@day6kilogram</p>
+           </div>
+           <div class="profile">
+               <a href="https://www.instagram.com/twicetagram/"><img src="img/@twice.jpg" style="width:150px;">
+               <p class="name">@twicetagram</p>
+           </div>
+           <div class="profile">
+               <a href="https://www.instagram.com/realstraykids/"><img src="img/@straykids.jpg" style="width:150px;">
+               <p class="name">@realstraykids</p>
+           </div>
+           <div class="profile">
+               <a href="https://www.instagram.com/itzy.all.in.us/"><img src="img/@itzy.jpg" style="width:150px;">
+               <p class="name">@itzy.all.in.us</p>
+           </div>
+           <div class="profile">
+               <a href="https://www.instagram.com/niziu_info_official/"><img src="img/@nizu.jpg" style="width:150px;">
+               <p class="name">@niziu_info_official</p>
+           </div>
+       </div>
+
+       <div class="f">
+           <div class="profile">
+               <a href="https://www.instagram.com/su1023_/"><img src="img/@eunsu.jpg" style="width:150px;">
+               <p class="name">@su1023_</p>
+           </div>
+           <div class="profile">
+               <a href="https://www.instagram.com/__shinyeeun/"><img src="img/@yeeun.jpg" style="width:150px;">
+               <p class="name">@__shinyeeun</p>
+           </div>
+           <div class="profile">
+            <a href="https://www.instagram.com/kim_d.he/"><img src="img/@donghwi.jpg" style="width:150px;"></a>
+               <p class="name">@kim_d.he</p>
+           </div>
+       </div>
+       </div>
+      </div>                 
+   </section>
+   </div>
+   </div>
+
+   <div class="button-group">
+      
+        <div class="button-top"> 
+         <a href="main.html">
+             <p id = 'text'>To the Top</p> 
+         <img src="img/icon-backtop.png" alt="">
+         </a>
+   </div>
+
+   
+      
+
+
+   <section class="footer">
+      <div class="foot">
+         <div class="footer-logo">
+            <img class="footer-logo-img" src="img/jyplogo_footer.png">
+         </div>
+         <div class="text-loc">
+            <p>서울특별시 강동구 강동대로 205</p><br>
+             <p class="te">광고, 매니지먼트 관련 문의(ad@jype.com)<br>
+해외사업, 마케팅, 사업제휴관련 문의(jypbusiness@jype.com)<br>
+국내/해외 공연 마케팅 사업 제휴관련 문의 (concert@jype.com</p>
+         </div>
+         <div class="text-oth">
+            <p>Copyrightⓒ2021 JYP Corporation. All rights reserved.</p>
+            <div class="footer-sns">
+               <a href="https://www.youtube.com/channel/UCaO6TYtlC8U5ttz62hTrZgg"><img src="img/youtube_footer.png"></a>
+               <a href="https://www.facebook.com/jypnation"><img src="img/facebook_footer.png"></a>
+               <a href="https://www.instagram.com/jypentertainment/"><img src="img/instagram_footer.png"></a>
+               <a href="https://twitter.com/jypnation"><img src="img/twitter_footer.png"></a>
+            </div>
+         </div>
+            
+         </div>   
+      </div>
+   </section>
+
+</body>
+</html>

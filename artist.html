@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ARTIST</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<style type="text/css">
+*{
+    font-family: 'Montserrat', sans-serif;
+	margin: 0;
+    padding: 0;
+}
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.header a {
+      text-decoration: none;
+      color: #000000;
+      }
+
+   .header li {
+      list-style: none;
+      }
+
+   .header {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      margin-left: 100px;
+      margin-right: 100px;
+      justify-content: space-between;
+      }
+
+   .list_menu {
+      margin-left: 92px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+       margin-right: 500px;
+      }
+
+   .list_menu li a {
+      margin-left: 32px;
+      margin-right: 32px;
+      font-size: 1rem;
+      font-weight: medium;
+      color: #333;
+      }
+
+   .list_menu li a:hover {
+      font-weight: 600;
+      }
+
+   .list_sns {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      }
+
+   .list_sns li a {
+      margin-left: 4px;
+      margin-right: 4px;
+      }
+
+   .list_lang {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      }
+
+   .list_lang li a {
+      margin-left: 4px;
+      margin-right: 4px;
+      font-size: 0.75rem;
+      }
+
+   .kor {
+      font-weight: 700;
+      }
+
+   .eng {
+      font-weight: 500;
+      }
+.hero-img{
+	background-image: url(img/hero-4.jpg);
+	height: 990px;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.visual{
+	background-color: #101121;
+	height: 1407px;
+	padding-top: 180px;
+}
+
+.main{
+	width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+	/*background-color: green;*/
+}
+.conA{
+	font-family: 'Montserrat', sans-serif;
+	background-color: #101121;
+}
+
+h1{
+	font-size: 1.75rem;
+	font-weight: 600;
+	color: #fff;
+}
+
+.group{
+	float: left;
+	width: 297px;
+	text-decoration: none;
+	margin-bottom: 50px;
+	/*background-color: blue;*/
+	margin-right: 30px;
+}
+
+.group4{
+	float: left;
+	width: 297px;
+	text-decoration: none;
+	margin-bottom: 50px;
+	/*background-color: blue;*/
+}
+
+.group a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.group4 a{
+	text-decoration: none;
+	color: #fff;
+} 
+
+.group .name{
+	margin-top: 24px;
+	font-size: 1.25rem;
+  font-weight: 400;
+	color: black;
+	text-align: center;
+	color: #fff;
+}
+
+.group4 .name{
+	margin-top: 24px;
+	font-size: 1.25rem;
+  font-weight: 400;
+	color: black;
+	text-align: center;
+	color: #fff;
+}
+
+.box-img{
+	margin-top: 52px;
+}
+.conB{
+	font-family: 'Montserrat', sans-serif;
+}
+.benner{
+	background-image: url(img/goods-benner.jpg);
+	height: 295px;
+	width: 100%;
+	background-position: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 197px;
+}
+.benner h2{
+	color: #333333;
+	font-size: 3rem;
+	font-weight: 500;
+	margin-left: 320px;
+}
+.benner h3{
+	color: #333333;
+	font-weight: 400;
+	font-size: 1.25rem;
+	margin-left: 320px;
+	margin-top: 32px;
+}
+#acc1{
+	background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url(img/hero-1.jpg);
+}
+#acc2{
+	background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ),url(img/hero-6.png);
+}
+#acc3{
+	background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(img/hero-3.jpg);
+}
+
+article.accordion
+{
+    display: block;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: auto;
+    position: relative;
+    background-color: #101121;
+}
+article.accordion section
+{
+    position: relative;
+    display: block;
+    float: left;
+    width: 5em;
+    height: 100%;
+    color: #333;
+    background-color: #333;
+    overflow: hidden;
+    border-radius: 3px;
+}
+article.accordion section h2
+{
+    position: absolute;
+    font-size: 1em;
+    font-weight: bold;
+    width: 12em;
+    height: 2em;
+    top: 12em;
+    left: 0;
+    text-indent: 1em;
+    padding: 0;
+    margin: 0;
+    color: #ddd;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+article.accordion section h2 a
+{
+    display: block;
+    width: 100%;
+    line-height: 2em;
+    text-decoration: none;
+    color: #fff;
+    outline: 0 none;
+}
+article.accordion section:target
+{
+    width: 90%;
+    color: #fff;
+}
+article.accordion section:target h2
+{
+    position: static;
+    font-size: 3.75rem;
+    text-indent: 0;
+    color: #fff;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    margin-left: 20px;
+}
+article.accordion section,
+article.accordion section h2
+{
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.footer{
+   background-color: #051A45;
+   height: 252px;
+    text-align: center;
+}
+.footer{
+      height: 120px;
+      width: 100%;
+      background-color: #051A45;
+      padding-top: 50px;
+      padding-bottom: 50px;
+   }
+   .foot{
+      display: inline-block;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: 1291px;
+
+   }
+   .footer-logo{
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+   }
+   .footer-logo-img{
+      height: 60px;
+   }
+
+   .text-loc{
+      display: inline-block;
+      color: #fff;
+      font-size: 12px;
+      width: 436px;
+      font-weight: 200;
+      vertical-align: top;
+      text-align: left;
+      margin-left: 140px;
+   }
+   .te{
+      margin-top: 20px;
+   }
+   .text-oth{
+      display: inline-block;
+      color: #fff;
+      font-size: 12px;
+      width: 382px;
+      font-weight: 200;
+      vertical-align: top;
+      text-align: right;
+
+   }
+   .text-oth img{
+      margin-top: 15px;
+      margin-left: 10px;
+   }
+   .footer-sns img:hover{
+      opacity: 0.8;
+   }
+   .footer-sns img{
+      height: 20px;
+      margin-top: 70px;
+   }
+   .button{
+   border: 2px solid #fff;
+   width: 240px;
+   
+   margin-left: auto;
+   margin-right: auto;
+
+   margin-top: 160px;
+   margin-bottom: 80px;
+   text-decoration: none;
+}
+.button a{
+     color: #fff;
+    text-decoration: none;
+}
+
+   .button p{
+   font-family:'Montserrat', sans-serif;
+   font-size: 14px;
+   font-weight: 500;
+   margin-top: 12px;
+   margin-bottom: 12px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.button-top{
+   display: inline-block;
+   margin-top: 40px;
+   margin-right: auto;
+   margin-left: 85%;
+    margin-bottom:80px;
+    vertical-align: center;
+}
+.button-top img{
+   opacity: 0.8;
+   width: 40px;
+   height: 40px;
+   display: inline-block;
+   float: right;
+}
+
+#text{ 
+ opacity: 0; 
+ font-size: 12px;
+ font-weight: 700px;
+ color: #fff;
+ display: inline-block;
+ margin-right: 10px;
+ margin-top: 12px;
+} 
+
+.button-top:hover #text{ 
+opacity: 1; 
+transition: 0.6s ease-in;
+}
+.button-top img:hover { 
+opacity: 1; 
+}
+.benner a{
+	text-decoration: none;
+}
+
+
+	</style>
+</head>
+<body>
+	
+	<section class="header">
+		<a href="main.html"><img src="img/logo.png" alt="logo" style="height:40px;"></a>
+
+		<ul class="list_menu">
+			<li><a href="#">COMPANY</a></li>
+			<li><a href="artist.html">ARTIST</a></li>
+			<li><a href="multimedia.html">MULTIMEDIA</a></li>
+		</ul>
+
+		<ul class="list_sns">
+         <li class="youtube"><a href="https://www.youtube.com/channel/UCaO6TYtlC8U5ttz62hTrZgg"><img src="img/youtube.png" alt="youtube" onmouseover="this.src='img/youtube_hover.png'" onmouseout="this.src='img/youtube.png'" style="height:18px;"></a></li>
+         <li class="facebook"><a href="https://www.facebook.com/jypnation"><img src="img/facebook.png" alt="facebook" onmouseover="this.src='img/facebook_hover.png'" onmouseout="this.src='img/facebook.png'" style="height:18px;"></a></li>
+         <li class="instagram"><a href="https://www.instagram.com/jypentertainment/"><img src="img/instagram.png" alt="instagram" onmouseover="this.src='img/instagram_hover.png'" onmouseout="this.src='img/instagram.png'" style="height:18px;"></a></li>
+         <li class="twitter"><a href="https://twitter.com/jypnation"><img src="img/twitter.png" alt="twitter" onmouseover="this.src='img/twitter_hover.png'" onmouseout="this.src='img/twitter.png'" style="height:18px;"></a></li>         
+      </ul>
+
+		<ul class="list_lang">
+			<li class="kor"><a href="#">KOR ㅣ</a></li>
+			<li class="eng"><a href="#">ENG</a></li>
+		</ul>
+	</section>
+
+	<article class="accordion">
+		<section id="acc1">
+			<a href="#acc"></a>
+			<h2><a href="#acc1">2PM</a></h2>
+		</section>
+		<section id="acc2">
+			<h2><a href="#acc2">ITZY</a></h2>
+		</section>
+		<section id="acc3">
+			<h2><a href="#acc3">STRAYKIDS</a></h2>
+		</section>
+
+	</article>
+
+
+
+
+		<section class="conA">
+			<div class="visual">
+				<div class="main">
+				<h1 class="title">ARTIST</h1>
+
+		<!-- <--첫번째줄-->
+		<div class="box-img">
+			 <a class="group" href="artist-media.html">
+				 <img src="img/jyp-pf-hover.jpg" alt="J.Y.Park" onmouseover="this.src='img/jyp-pf.jpg'" onmouseout="this.src='img/jyp-pf-hover.jpg'" style="width:297px;">
+				 <p class="name">J.Y.Park</p>
+			 </a>
+		 </div>
+		 <div class="box-img">
+			 <a class="group" href="artist-media.html">
+				 <img src="img/2pm-pf-hover.jpg" alt="2PM" onmouseover="this.src='img/2pm-pf.jpg'" onmouseout="this.src='img/2pm-pf-hover.jpg'" style="width:297px;">
+				 <p class="name">2PM</p>
+			 </a>
+		 </div>
+		 <div class="box-img">
+			 <a class="group" href="artist-media.html">
+				 <img src="img/bernard-pf.jpg" alt="Bernard Park" onmouseover="this.src='img/bernard-pf-hover.jpg'" onmouseout="this.src='img/bernard-pf.jpg'" style="width:297px;">
+				 <p class="name">Bernard Park</p>
+			 </a>
+		 </div>
+		 <div class="box-img">
+			 <a class="group4" href="artist-media.html">
+				 <img src="img/day6-pf.jpg" alt="DAY6" onmouseover="this.src='img/day6-pf-hover.jpg'" onmouseout="this.src='img/day6-pf.jpg'" style="width:297px;">
+				 <p class="name">DAY6</p>
+			 </a>
+		 </div>
+
+		 <!-- <--두번째줄--> 
+		 <div class="box-img">
+			 <a class="group" href="artist-media.html">
+				 <img src="img/twice-pf.jpg" alt="TWICE" onmouseover="this.src='img/twice-pf-hover.jpg'" onmouseout="this.src='img/twice-pf.jpg'" style="width:297px;">
+				 <p class="name">TWICE</p>
+			 </a>
+		 </div>
+		 <div class="box-img">
+			 <a class="group" href="artist-media.html">
+				 <img src="img/straykids-pf.jpg" alt="Stray Kids" onmouseover="this.src='img/straykids-pf-hover.jpg'" onmouseout="this.src='img/straykids-pf.jpg'" style="width:297px;">
+				 <p class="name">Stray Kids</p>
+			 </a>
+		 </div>
+		 <div class="box-img">
+			 <a class="group" href="artist-media.html">
+				 <img src="img/itzy-pf.jpg" alt="ITZY" onmouseover="this.src='img/itzy-pf-hover.jpg'" onmouseout="this.src='img/itzy-pf.jpg'" style="width:297px;">
+				 <p class="name">ITZY</p>
+			 </a>
+		 </div>
+		 <div class="box-img">
+			 <a class="group4" href="artist-media.html">
+				 <img src="img/boystory-pf.jpg" alt="BOY STORY" onmouseover="this.src='img/boystory-pf-hover.jpg'" onmouseout="this.src='img/boystory-pf.jpg'" style="width:297px;">
+				 <p class="name">BOY STORY</p>
+			 </a>
+		 </div>
+
+		 <!-- <--세번째줄--> 
+		 <div class="box-img">
+			 <a class="group" href="artist-media.html">
+				 <img src="img/nizu-pf.jpg" alt="NiziU" onmouseover="this.src='img/nizu-pf-hover.jpg'" onmouseout="this.src='img/nizu-pf.jpg'" style="width:297px;">
+				 <p class="name">NiziU</p>
+			 </a>
+		 </div>
+		 <div class="box-img">
+			 <a class="group" href="artist-media.html">
+				 <img src="img/eunsu-pf.jpg" alt="Sin Eunsu" onmouseover="this.src='img/eunsu-pf-hover.jpg'" onmouseout="this.src='img/eunsu-pf.jpg'" style="width:297px;">
+				 <p class="name">Sin Eunsu</p>
+			 </a>
+		 </div>
+		 <div class="box-img">
+			 <a class="group" href="artist-media.html">
+				 <img src="img/yeeun-pf.png" alt="Sin Ye-eun" onmouseover="this.src='img/yeeun-pf-hover.png'" onmouseout="this.src='img/yeeun-pf.png'" style="width:297px;">
+				 <p class="name">Sin Ye-eun</p>
+			 </a>
+		 </div>
+		 <div class="box-img">
+			 <a class="group4" href="artist-media.html">
+				 <img src="img/donghwi-pf.jpg" alt="Kim Dong-hwi" onmouseover="this.src='img/donghwi-pf-hover.jpg'" onmouseout="this.src='img/donghwi-pf.jpg'" style="width:297px;">
+				 <p class="name">Kim Dong-hwi</p>
+			 </a>
+		 </div>
+			</div>
+			</div>
+
+			<section class="benner">
+				<a href="goods.html">
+					<div class="t">
+					<h2>Goods</h2>
+					<h3>JYP 아티스트들의 다양한 굿즈들을 만나보세요!</h3>
+				</div>
+			</section>
+
+			<div class="button">
+          <p><a href="main.html">BACK TO LIST</a></p>
+       </div>
+      
+        <div class="button-top"> 
+        	<a href="artist.html">
+        		 <p id = 'text'>To the Top</p> 
+         <img src="img/icon-backtop.png" alt="">
+        	</a>
+        
+      </div>
+
+			<section class="footer">
+      <div class="foot">
+         <div class="footer-logo">
+            <img class="footer-logo-img" src="img/jyplogo_footer.png">
+         </div>
+				</a>
+				
+         <div class="text-loc">
+            <p>서울특별시 강동구 강동대로 205</p><br>
+             <p class="te">광고, 매니지먼트 관련 문의(ad@jype.com)<br>
+해외사업, 마케팅, 사업제휴관련 문의(jypbusiness@jype.com)<br>
+국내/해외 공연 마케팅 사업 제휴관련 문의 (concert@jype.com</p>
+         </div>
+         <div class="text-oth">
+            <p>Copyrightⓒ2021 JYP Corporation. All rights reserved.</p>
+            <div class="footer-sns">
+               <a href="https://www.youtube.com/channel/UCaO6TYtlC8U5ttz62hTrZgg"><img src="img/youtube_footer.png"></a>
+               <a href="https://www.facebook.com/jypnation"><img src="img/facebook_footer.png"></a>
+               <a href="https://www.instagram.com/jypentertainment/"><img src="img/instagram_footer.png"></a>
+               <a href="https://twitter.com/jypnation"><img src="img/twitter_footer.png"></a>
+            </div>
+         </div>   
+      </div>
+   </section>
+   </div>
+			
+		
+	</section>
+
+
+
+
+
+	
+	
+	
+
+</body>
+</html>
